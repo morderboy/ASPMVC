@@ -1,0 +1,17 @@
+﻿@using ASPMVC.Models
+@using ASPMVC.ViewModels
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Wether list for vladivostok.</p>
+    <table>
+        <tr><td>Date</td><td>Temperature</td><td>Type</td></tr>
+        @foreach (WeatherModel w in Model.Weather)
+        {
+            <tr><td>@w.UploadTime</td><td>@w.Temperature</td><td>@w.Type</td></tr>
+        }
+    </table>
+</div>
